@@ -1,0 +1,27 @@
+body {
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    353deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: greenyellow;
+  padding-left: 40%;
+}
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 600px;
+  height: 600px;
+  display: grid;
+  place-items: center;
+}
