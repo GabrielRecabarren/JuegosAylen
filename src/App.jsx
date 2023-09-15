@@ -1,4 +1,4 @@
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Button } from "./components/Button/Button";
 import Rot13Content from "./components/Rot-13/Rot13Content";
 import { Home } from "./components/Home/Home";
