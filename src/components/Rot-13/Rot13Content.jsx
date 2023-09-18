@@ -1,31 +1,22 @@
-import { useState, useEffect  } from "react";
-import { Button } from "../Button/Button";
+import { useState } from "react";
 import { rot13 } from "./rot13-js";
+import { Link } from "react-router-dom";
+import { Button } from "../Button/Button";
 
 function Rot13Content() {
-  const [level, setLevel] = useState(0);
-  const [content, setContent] = useState("Bienvenida");
+  const [encoded, setEncoded] = useState(true);
 
   const saludo = "Hola Aylen";
   const saludoRoteado = rot13(saludo);
 
-  const levelUp = () => {
-    setLevel(level+1);
-    console.log(level)
-  }
-
-  
-  
   return (
     <div>
-      <h2>{level===0 ? saludoRoteado : saludo}</h2>
+      <h2 onClick={()=>setEncoded(!encoded)}>{encoded ? saludoRoteado : saludo}</h2>
       <p>Bienvenid@ a este juego para aprender sobre Rot-13.</p>
-      <h3> </h3>
-
-
-      <Button btnName={"Lvl-1"} btnNum={"10"} onClick={()=> alert("hola")} />
+      <Link to={"/rot-13/rot-13-0"}>
+        <Button btnName={"Qué es ?"} btnNum={10} ></Button>
+      </Link>
     </div>
   );
 }
-
 export default Rot13Content;

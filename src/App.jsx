@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Button } from "./components/Button/Button";
 import Rot13Content from "./components/Rot-13/Rot13Content";
 import { Home } from "./components/Home/Home";
+import { Rot13_0 } from "./components/Rot-13/Rot13_0";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/rot-13" element={<Rot13Content />} />
+          <Route path="/rot-13/rot-13-0" element={<Rot13_0 />} />
+
         </Routes>
       </div>
     </div>
