@@ -1,6 +1,8 @@
-
+import { useContext } from "react"
+import { useUser } from "../../Context/UserContext"
 export const Home = () => {
+  const {user} = useUser();
   return (
-    <div>Bienvenida Aylén</div>
+    <div>Bienvenid@ {user}</div>
   )
 }
